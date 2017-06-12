@@ -1,0 +1,21 @@
+<div class="container">
+
+  <%= erb :'/_errors'%>
+
+  <form class="" action="/users" method="post">
+    <div class="">
+      <label for="username">username:</label>
+      <input type="text" name="user[username]" id="username" value="">
+    </div>
+    <div class="">
+      <label for="email">email:</label>
+      <input type="email" name="user[email]" id="email" value="">
+    </div>
+    <div class="">
+      <label for="password">password:</label>
+      <input type="password" name="user[password]" id="password" value="">
+    </div>
+
+    <input type="submit" name="" value="Create">
+  </form>
+</div>

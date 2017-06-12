@@ -1,0 +1,10 @@
+<div class="container">
+    <ul>
+      <% if @readers.empty? %>
+        <h5>This book doesn't have any readers</h5>
+      <% end %>
+      <% @readers.each do |reader|%>
+        <li><%= reader.username%></li>
+      <%end %>
+    </ul>
+</div>

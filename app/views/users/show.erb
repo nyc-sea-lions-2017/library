@@ -1,0 +1,7 @@
+<div class="container">
+    <ul>
+      <% @books.each do |book|%>
+        <li><%= book.title%> - <%= book.author%></li>
+      <%end %>
+    </ul>
+</div>

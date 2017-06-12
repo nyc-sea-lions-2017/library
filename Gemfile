@@ -9,11 +9,13 @@ gem 'sinatra-contrib'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
+gem 'bcrypt'
+gem 'pry'
 
 gem 'rake'
 
 gem 'shotgun', '~>0.9.1'
-
+  gem 'faker'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
