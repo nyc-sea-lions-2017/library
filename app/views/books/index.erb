@@ -7,7 +7,7 @@
         <% if book.read?(current_user) %>
           <h3 class="read-book">You alreader read this book</h3>
           <% else  %>
-          <form class="" action="/books/<%= book.id%>/reserve" method="post">
+          <form class="add-reader" action="/books/<%= book.id%>/reserve" method="post">
             <input type="submit" name="" value="Read!">
           </form>
         <% end %>

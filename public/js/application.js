@@ -1,7 +1,18 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+$('.add-reader').on('submit', function(e){
+  e.preventDefault();
+  // debugger
+  var that = this
+  var url = $(e.target).attr('action')
+  var method = $(e.target).attr('method')
+  $.ajax({
+    url: url,
+    method: method
+  }).done(function(res){
+    console.log(e.target)
+    $(e.target).html('<h3 class="read-book">' + res.message + '</h3>')
+  })
+})
+
 });

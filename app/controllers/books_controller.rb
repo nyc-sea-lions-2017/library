@@ -14,7 +14,12 @@ post '/books/:id/reserve' do
   @book = Book.find_by(id: params[:id])
   @read_book = current_user.book_readers.new(book_id: @book.id)
   if @read_book.save
-    redirect '/'
+    if request.xhr?
+      content_type :json
+      {message: "You alreader read this book"}.to_json
+    else
+      redirect '/'
+    end
   end
 
 end
